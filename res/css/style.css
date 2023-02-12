@@ -1,11 +1,45 @@
-body{
-    margin: 0;
-    padding: 0;
+*{
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
-header{
+body{
+    margin: 0;
+    padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+#startPage{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+header{
     font-size: 30px;
+}
+#startGame{
+    width: 180px;
+    height: 75px;
+    font-size: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#game{
+    display: flex;
+    flex-wrap: wrap;
+    width: 2200px;
+    height: 2200px;
+    border: 1px solid black;
+}
+.hole{
+    height: 33.33%;
+    width: 33.33%;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.holeImg{
+    width: 100%;
 }
