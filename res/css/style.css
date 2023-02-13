@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
 }
 body{
     margin: 0;
@@ -9,6 +8,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 #startPage{
     display: none;
@@ -27,10 +28,17 @@ header{
 }
 #game{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: none;
+}
+#board{
+    display: flex;
     flex-wrap: wrap;
-    width: 2200px;
-    height: 2200px;
+    width: 700px;
+    height: 700px;
     border: 1px solid black;
+    margin-right: -1px;
 }
 .hole{
     height: 33.33%;
@@ -39,7 +47,50 @@ header{
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    overflow: hidden;
 }
 .holeImg{
-    width: 100%;
+    width: 240px;
+    position: absolute;
+}
+.mole{
+    /* display: none; */
+    width: 65px;
+    transform: translate(-10%, -26%);
+}
+#hammer{
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/hammer.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    transform: translate(-48%, -35%) rotate(-26deg);
+    transition: transform .1s;
+}
+#hammer:active{
+    transform: translate(-20%, -20%) rotate(-75deg);
+}
+@keyframes moleIn {
+    0%{
+        transform: translate(-10%, -26%);
+        width: 65px;
+    }
+    100%{
+        transform: translate(-10%, -40%);
+        width: 140px;
+
+    }
+}
+
+@keyframes moleOut {
+    0%{
+        transform: translate(-10%, -26%);
+        width: 140px;
+    }
+    100%{
+        transform: translate(-10%, -40%);
+        width: 65px;
+    }
 }
