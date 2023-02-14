@@ -19,7 +19,7 @@ body{
 header{
     font-size: 30px;
 }
-#startGame{
+#playGame{
     width: 180px;
     height: 75px;
     font-size: 50px;
@@ -31,6 +31,19 @@ header{
     flex-direction: column;
     align-items: center;
     cursor: none;
+    width: 100%;
+    height: 100%;
+}
+#startGame{
+    width: 180px;
+    height: 75px;
+    font-size: 50px;
+    border-radius: 10px;
+    cursor: none;
+}
+#scoreInfo{
+    display: flex;
+    font-size: 30px;
 }
 #board{
     display: flex;
@@ -52,11 +65,12 @@ header{
 .holeImg{
     width: 240px;
     position: absolute;
+    z-index: 1;
 }
 .mole{
     /* display: none; */
-    width: 65px;
-    transform: translate(-10%, -26%);
+    width: 60px;
+    transform: translate(-10%, -43%);
 }
 #hammer{
     width: 150px;
@@ -68,14 +82,16 @@ header{
     top: 150px;
     transform: translate(-48%, -35%) rotate(-26deg);
     transition: transform .1s;
+    z-index: 100;
+    pointer-events: none;
 }
 #hammer:active{
     transform: translate(-20%, -20%) rotate(-75deg);
 }
 @keyframes moleIn {
     0%{
-        transform: translate(-10%, -26%);
-        width: 65px;
+        transform: translate(-10%, -43%);
+        width: 60px;
     }
     100%{
         transform: translate(-10%, -40%);
@@ -90,7 +106,7 @@ header{
         width: 140px;
     }
     100%{
-        transform: translate(-10%, -40%);
-        width: 65px;
+        transform: translate(-10%, -43%);
+        width: 60px;
     }
 }

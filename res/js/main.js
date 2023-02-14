@@ -1,9 +1,13 @@
 const startPage = document.getElementById("startPage");
-const startGame = document.getElementById("startGame");
+const playGame = document.getElementById("playGame");
 const game = document.getElementById("game");
+const startGame = document.getElementById("startGame");
+const scoreNumber = document.getElementById("scoreNumber");
 const moles = document.getElementsByClassName("mole");
 const holes = document.getElementsByClassName("hole");
 const hammer = document.getElementById("hammer");
+
+let score = 0;
 
 startGame.onclick = () => {
     startPage.style.display = "none";
@@ -15,9 +19,28 @@ window.addEventListener('mousemove', e =>{
     hammer.style.left = e.pageX + 'px';
 })
 
-    // [...moles].forEach((mole) => {
-    //     mole.style.animation = `moleIn 1000ms`;
-    //     mole.style.width = "140px";
-    //     mole.style.transform = "translate(-10%, -40%)";
+window.onmousedown = () => {
+    hammer.style.transform = "translate(-20%, -20%) rotate(-75deg)";
+}
 
-    // });
+window.onmouseup = () => {
+    hammer.style.transform =  "translate(-48%, -35%) rotate(-26deg)";
+}
+
+        
+function run() {
+            const i = Math.floor(Math.random() * moles.length);
+            
+            moles[i].style.animation = `moleIn 400ms forwards`;
+            [...moles].forEach((mole) => {
+                mole.onclick = () => {
+                    mole.style.animation = `moleOut 400ms forwards`;
+                    score++;
+                    scoreNumber.innerText = score;
+                }
+            });
+}
+
+startGame.onclick = () => {
+    run()
+}
