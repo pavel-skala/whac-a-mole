@@ -42,21 +42,46 @@ header{
     border-radius: 10px;
     cursor: none;
 }
-#scoreInfo{
+#scoreInfo, #maxScoreInfo{
     display: flex;
     font-size: 30px;
 }
-#board{
+#maxScoreInfo{
+    position: absolute;
+    left: 53px;
+    top: 53px;
+}
+#molesInfo{
+    position: absolute;
+    left: 10px;
+    top: 100px;
+}
+#molesInfo > div{
     display: flex;
-    flex-wrap: wrap;
-    width: 700px;
-    height: 700px;
+    align-items: center;
+    justify-content: space-between;
+}
+.moleInfoImg{
+    width: 100px;
+    height: 100px;
+}
+#mole1InfoPoints, #mole2InfoPoints, #mole3InfoPoints, #mole4InfoPoints, #mole5InfoPoints{
+    font-size: 35px;
+}
+
+
+/* game */
+
+
+#board{
+    display: grid;
+    grid-template-columns: repeat(3,240px);
+    grid-template-rows: repeat(3,240px);
+    width: 720px;
+    height: 720px;
     border: 1px solid black;
-    margin-right: -1px;
 }
 .hole{
-    height: 33.33%;
-    width: 33.33%;
     border: 1px solid black;
     display: flex;
     align-items: flex-end;
