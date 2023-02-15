@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    user-select: none;
 }
 body{
     margin: 0;
@@ -70,7 +71,11 @@ header{
 .mole{
     /* display: none; */
     width: 60px;
-    transform: translate(-10%, -43%);
+    height: 60px;
+    transform: translate(-10%, -34%);
+    background-image: url(../img/mole1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 #hammer{
     width: 150px;
@@ -90,23 +95,23 @@ header{
 }
 @keyframes moleIn {
     0%{
-        transform: translate(-10%, -43%);
         width: 60px;
+        height: 60px;
     }
     100%{
-        transform: translate(-10%, -40%);
         width: 140px;
+        height: 140px;
 
     }
 }
 
 @keyframes moleOut {
     0%{
-        transform: translate(-10%, -26%);
         width: 140px;
+        height: 140px;  
     }
     100%{
-        transform: translate(-10%, -43%);
         width: 60px;
+        height: 60px;
     }
 }
