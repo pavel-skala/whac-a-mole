@@ -37,17 +37,26 @@ header{
     height: 100%;
 }
 #startGame{
+    position: absolute;
+    top: 35px;
+    left: 350px;
     width: 180px;
     height: 75px;
     font-size: 50px;
     border-radius: 10px;
     cursor: none;
 }
-#scoreInfo, #maxScoreInfo{
+#scoreInfo, #timerInfo{
     display: flex;
     font-size: 30px;
+    height: 60px;
+}
+#scoreInfo{
+    margin-top: 22px;
 }
 #maxScoreInfo{
+    display: flex;
+    font-size: 30px;
     position: absolute;
     left: 53px;
     top: 53px;
@@ -74,7 +83,7 @@ header{
     width: 100px;
     border-radius: 30%;
 }
-#mole1InfoPoints, #mole2InfoPoints, #mole3InfoPoints, #mole4InfoPoints, #mole5InfoPoints{
+.moleInfoPoints{
     font-size: 35px;
 }
 
@@ -84,9 +93,9 @@ header{
 
 #board{
     display: grid;
-    grid-template-columns: repeat(3,240px);
+    grid-template-columns: repeat(4,240px);
     grid-template-rows: repeat(3,240px);
-    width: 720px;
+    width: 960px;
     height: 720px;
     border: 1px solid black;
 }
