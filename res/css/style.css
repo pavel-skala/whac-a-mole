@@ -13,21 +13,7 @@ body{
     height: 100vh;
     overflow: hidden;
 }
-#startPage{
-    display: none;
-    flex-direction: column;
-    align-items: center;
-}
-header{
-    font-size: 30px;
-}
-#playGame{
-    width: 180px;
-    height: 75px;
-    font-size: 50px;
-    border-radius: 10px;
-    cursor: pointer;
-}
+
 #game{
     display: flex;
     flex-direction: column;
@@ -35,6 +21,7 @@ header{
     cursor: none;
     width: 100%;
     height: 100%;
+    background-color: rgb(245 245 237);
 }
 #startGame{
     position: absolute;
@@ -43,8 +30,10 @@ header{
     width: 180px;
     height: 75px;
     font-size: 50px;
-    border-radius: 10px;
+    border-radius: 27px;
     cursor: none;
+    background-color: rgb(46 46 46);
+    color: white;
 }
 #scoreInfo, #timerInfo{
     display: flex;
@@ -112,7 +101,6 @@ header{
     z-index: 1;
 }
 .mole{
-    /* display: none; */
     width: 60px;
     height: 60px;
     transform: translate(-10%, -34%);
