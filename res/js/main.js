@@ -67,7 +67,7 @@ function run() {
         moleIndex = false;
         
         MoleFunction();
-    }, 500);
+    }, 700);
 }
 
 [...moles].forEach((mole) => {
